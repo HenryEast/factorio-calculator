@@ -1,0 +1,344 @@
+/* Factorio Calculator - External Stylesheet
+   Design Paradigm: Mobile-First Respnsive Layout
+   Theme: Industral Drk Slate with a Factorio Orange Accent
+*/
+
+/* CSS Custom Properties (Variables) Setup */
+:root {
+  --bg-main: #181a1b;
+  --bg-card: #222527;
+  --bg-input: #2d3135;
+  --text-main: #f0f2f5;
+  --text-muted: #a0a6b0;
+  --border-color: #3a3f45;
+  --accent-orange: #e07a1e;
+  --accent-orange-hover: #f38b2b;
+  --accent-yellow: #f0c040;
+  --accent-blue: #3a8ee6;
+  --accent-red: #e74c3c;
+  --font-family: Arial, Helvetica, sans-serif;
+  --radius: 6px;
+  --transition: all 0.2s ease-in-out;
+}
+
+/* CSS Box Sizing Universal Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Landmrk Styling */
+.site-header {
+  background-color: var(--bg-card);
+  border-bottom: 3px solid var(--accent-orange);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  color: var(--accent-orange);
+  margin-bottom: 0.5rem;
+}
+
+.site-tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Main Layout Container (Mobile-First Default: Sngle Column Stacked) */
+.main-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Section Card Container */
+.card-section {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.card-section h2 {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* HTML Form Controls & Fieldsets */
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group-box {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+legend {
+  font-weight: bold;
+  color: var(--accent-orange);
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.required {
+  color: var(--accent-orange);
+}
+
+.help-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Input & Select Contrls (Attribute & Tag Selectors) */
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+select:focus,
+input[type="number"]:focus {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 2px;
+  border-color: var(--accent-orange);
+}
+
+/* Sub-fildset for Radio Buttons */
+.sub-fieldset {
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.sub-legend {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.radio-option,
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent-orange);
+  cursor: pointer;
+}
+
+/* Form Action Buttons */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--accent-orange);
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-orange-hover);
+  outline: 2px solid var(--text-main);
+}
+
+.btn-secondary {
+  background-color: var(--bg-input);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--border-color);
+  color: var(--text-main);
+}
+
+/* Calculation Output Results Styling */
+.placeholder-msg {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-color);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.result-card {
+  background-color: var(--bg-input);
+  border-left: 4px solid var(--accent-orange);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.result-card h3 {
+  font-size: 1.1rem;
+  color: var(--accent-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.result-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+/* Key information vsiual */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 0.4rem;
+}
+
+.badge-warning {
+  background-color: #d35400;
+  color: #ffffff;
+}
+
+.badge-success {
+  background-color: #27ae60;
+  color: #ffffff;
+}
+
+/* Utility Class to Hide Elements */
+.hidden {
+  display: none !important;
+}
+
+/* Footer Landmark Styling */
+.site-footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-container p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.footer-container a {
+  color: var(--accent-orange);
+  text-decoration: none;
+}
+
+.footer-container a:hover,
+.footer-container a:focus {
+  text-decoration: underline;
+}
+
+/* Responsive Media Queries (Mobile-First Breakpoint Expansion)
+   Targeting Medium Screens / Desktop (768px and up) */
+@media (min-width: 768px) {
+  /* Site Header Expansion */
+  .site-title {
+    font-size: 2.1rem;
+  }
+
+  /* Two-Column Side-by-Side Dashboard Layout for Input Form & Output Results */
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  /* Form Action Buttons Side-by-Side */
+  .form-actions {
+    flex-direction: row;
+  }
+
+  .btn {
+    flex: 1;
+  }
+}
